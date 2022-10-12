@@ -13,8 +13,8 @@
     "staged": "lint-staged",
     "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/**/*.css\"",
-    "stylelint:fix": "stylelint \"src/**/*.css\" --fix",
+    "stylelint": "stylelint \"src/**/*.scss\" --custom-syntax 'postcss-scss'",
+    "stylelint:fix": "stylelint \"src/**/*.scss\" --custom-syntax 'postcss-scss' --fix",
     "lint": "yarn editorconfig && yarn stylelint"
   },
   "author": "",
@@ -34,7 +34,10 @@
     "lint-staged": "^13.0.3",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss-loader": "^7.0.0",
+    "postcss-scss": "^4.0.5",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
     "stylelint": "^14.13.0",
     "stylelint-order": "^5.0.0",
     "webpack": "^5.73.0",
@@ -49,6 +52,6 @@
   },
   "editorconfig-cli": [
     "*.json",
-    "src/**/*.{js, css}"
+    "src/**/*.{js, scss}"
   ]
 }

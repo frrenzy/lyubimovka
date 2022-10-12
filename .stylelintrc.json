@@ -2,6 +2,7 @@
   "plugins": [
     "stylelint-order"
   ],
+  "customSyntax": "postcss-scss",
   "rules": {
     "color-no-invalid-hex": true,
     "font-family-no-duplicate-names": true,
